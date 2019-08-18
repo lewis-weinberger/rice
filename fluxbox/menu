@@ -1,0 +1,48 @@
+[begin] (FLUXBOX)
+[encoding] {UTF-8}
+      [exec] ( run) {fbrun} 
+      [separator]
+      [exec] ( urxvt) {urxvt} <~/icons/terminal.png> 
+      [exec] ( yat) {urxvt -e yat} <~/icons/todo.png>
+      [exec] ( mc) {urxvt -e mc} <~/icons/files.png>
+      [exec] ( top) {urxvt -e top} <~/icons/status.png>
+      [exec] ( emacs) {emacsclient -c -a ""} <~/icons/emacs.png>
+[separator]
+[submenu] (Edit dotfiles)
+      [exec] (.bashrc) {emacsclient -c -a "" ~/.bashrc}
+      [exec] (.Xresources) {emacsclient -c -a "" ~/.Xresources}
+      [exec] (.emacs) {emacsclient -c -a "" ~/.emacs}
+[end]
+[submenu] (Fluxbox menu)
+      [submenu] (Edit configs)
+      [exec] (menu) {emacsclient -c -a "" ~/.fluxbox/menu}
+      [exec] (keys) {emacsclient -c -a "" ~/.fluxbox/keys}
+      [exec] (init) {emacsclient -c -a "" ~/.fluxbox/init}
+      [exec] (startup) {emacsclient -c -a "" ~/.fluxbox/startup}
+      [exec] (overlay) {emacsclient  -c -a "" ~/.fluxbox/overlay}
+      [exec] (apps) {emacsclient -c -a "" ~/.fluxbox/apps}
+      [exec] (style) {emacsclient -c -a "" ~/.fluxbox/styles/retro_minimal/theme.cfg}
+      [separator]
+      [reconfig] (Reload config) 
+[end]
+      [config] (Configure)
+[submenu] (System Styles) {Choose a style...}
+      [stylesdir] (/usr/share/fluxbox/styles)
+[end]
+[submenu] (User Styles) {Choose a style...}
+      [stylesdir] (~/.fluxbox/styles)
+[end]
+#[submenu] (Tools)
+#      [exec] (Run) {fbrun }
+#      [exec] (Regen Menu) {fluxbox-generate_menu }
+#[end]
+      [commanddialog] (Fluxbox Command)
+      [exec] (About) {(fluxbox -v; fluxbox -info | sed 1d) | xmessage -file - -center}
+[end]
+[workspaces] (Workspaces)
+[submenu] (System)
+      [exec] ( Lock) {xscreensaver-command -lock}
+      [exit] ( Logout)
+[end]
+[endencoding]
+[end]

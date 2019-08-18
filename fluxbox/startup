@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Mouse acceleration
+xset m 1/1 0
+
+# Lock screen
+xscreensaver &
+
+# Set background image
+feh --bg-fill ~/wallpapers/background.png &
+
+# Start emacs daemon
+emacs --daemon &
+
+# And last but not least we start fluxbox.
+exec fluxbox -log ~/.fluxbox/log
