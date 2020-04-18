@@ -1,0 +1,17 @@
+#!/bin/sh
+# Acme startup script.
+# PLAN9 variable points to plan9port installation.
+
+export PATH=$PATH:$PLAN9/bin
+export SHELL=$PLAN9/bin/rc
+export acmeshell=$PLAN9/bin/rc
+
+pgrep plumber || plumber &
+
+if [ -f ~/acme.dump ]; then
+    DUMP="-l $HOME/acme.dump"
+else
+    DUMP=""
+fi
+
+acme -a -f $PLAN9/font/lucsans/typeunicode.7.font $DUMP
