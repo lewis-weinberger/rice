@@ -2,9 +2,9 @@
 
 /* appearance */
 static const char *fonts[] = {
-	"B&H LucidaTypewriter:size=10"
+	"B&H LucidaTypewriter:pixelsize=12"
 };
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "B&H LucidaTypewriter:pixelsize=12";
 static const char normbordercolor[] = "#9EEEEE";
 static const char normbgcolor[]     = "#4E4E4E";
 static const char normfgcolor[]     = "#9EEEEE";
