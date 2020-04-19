@@ -60,6 +60,7 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *lockcmd[]  = { "xscreensaver-command", "-lock",  NULL };
 static const char *ffcmd[]  = { "firejail", "firefox",  NULL };
 static const char *tbcmd[]  = { "firejail", "thunderbird",  NULL };
+static const char *clkmenucmd[]  = { "9menu.sh",  NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -116,6 +117,7 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkRootWin,           0,              Button3,        spawn,          {.v = clkmenucmd } },
 };
 
 
