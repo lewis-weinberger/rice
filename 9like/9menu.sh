@@ -6,4 +6,8 @@
     -fg "#88CC88" \
     -bg "#E9FFE9" \
     -font "-b&h-lucidatypewriter-medium-r-normal-sans-12-*-*-*-*-*-*-*" \
-    a st firefox thunderbird exit
+    "editor:a" \
+    "terminal:st" \
+    "browser:firefox" \
+    "email:thunderbird" \
+    exit
